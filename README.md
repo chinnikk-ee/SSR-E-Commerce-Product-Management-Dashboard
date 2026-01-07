@@ -22,7 +22,7 @@ Use the following credentials to access the dashboard:
 
 ```
 Email: admin@example.com
-Password: admin123
+Password: admin@strongpass
 ```
 
 > ⚠️ These are **dummy credentials** created only for evaluation purposes.
@@ -79,7 +79,7 @@ prisma/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone <repo-url>
 cd SSR-E-Commerce-Product-Management-Dashboard
 ```
 
@@ -102,6 +102,7 @@ Set required values such as:
 * `DATABASE_URL`
 * `JWT_SECRET`
 * `CLOUDINARY_*`
+* `ADMIN_*`
 
 ---
 
@@ -122,7 +123,7 @@ npm run db:seed
 This creates a default admin user:
 
 * Email: `admin@example.com`
-* Password: `admin123`
+* Password: `admin@strongpass`
 * Name: `Admin User`
 
 ---
