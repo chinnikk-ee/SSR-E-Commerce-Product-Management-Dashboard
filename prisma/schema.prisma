@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  ignoreDuringBuilds = true
 }
 
 datasource db {
