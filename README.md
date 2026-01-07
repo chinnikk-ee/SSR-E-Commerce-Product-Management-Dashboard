@@ -6,7 +6,7 @@ A **Server-Side Rendered (SSR) Admin Dashboard** built with **Next.js App Router
 
 ## 🚀 Live Demo
 
-👉 **Live URL:** *Add your deployed Vercel link here*
+👉 **Live URL:** https://ssr-e-commerce-product-management-d.vercel.app/
 
 ---
 
