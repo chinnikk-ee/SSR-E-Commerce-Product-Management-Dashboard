@@ -163,6 +163,31 @@ Open: **[http://localhost:3000](http://localhost:3000)**
 
 ---
 
+## 📊 Sales Trend & Product Description Notes
+
+### 📊 Sales Trend (Demonstration Only)
+The **Sales Trend** displayed in the dashboard is **not an accurate real-world sales metric**.  
+It is calculated using a **sample formula purely for demonstration purposes** to showcase data aggregation, processing, and visualization capabilities.
+
+This implementation is intended to indicate that **accurate sales trends can be calculated** when real business data such as order history, transactions, or time-based sales records are available.  
+The current logic serves as an example to demonstrate how analytics can be extended in a production-ready system.
+
+---
+
+### 📝 Product Description (Stored for Future Use)
+The **Product Description** field is currently **stored in the database but not displayed in the UI**.  
+It is included to demonstrate system extensibility and future-ready data modeling.
+
+This field can be used in future enhancements such as:
+- Displaying detailed product information
+- Implementing search and filtering
+- Creating customer-facing product pages
+- Improving SEO and content presentation
+
+This approach shows that the application can be extended **without requiring schema or architectural changes**.
+
+---
+
 ## 📌 Submission Checklist
 
 * ✅ Public GitHub repository
