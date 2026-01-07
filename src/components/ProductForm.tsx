@@ -185,7 +185,20 @@ export default function ProductForm({ mode, initial }: Props) {
       )}
 
       <div style={{ display: "flex", justifyContent: "space-between", marginTop: 16 }}>
-        <button onClick={() => setStep((s) => Math.max(1, s - 1))} disabled={step === 1 || saving}>
+        <button
+          onClick={() => setStep((s) => Math.max(1, s - 1))}
+          disabled={step === 1 || saving}
+          style={{
+            padding: "8px 16px",
+            borderRadius: "8px",
+            border: "1px solid rgba(168, 85, 247, 0.2)",
+            background: step === 1 || saving ? "rgba(255, 255, 255, 0.05)" : "linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%)",
+            color: step === 1 || saving ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0.8)",
+            fontWeight: 500,
+            cursor: step === 1 || saving ? "not-allowed" : "pointer",
+            transition: "all 0.2s ease",
+          }}
+        >
           Back
         </button>
 
@@ -195,11 +208,36 @@ export default function ProductForm({ mode, initial }: Props) {
               if (validateCurrentStep()) setStep((s) => s + 1);
             }}
             disabled={saving}
+            style={{
+              padding: "8px 16px",
+              borderRadius: "8px",
+              border: "1px solid rgba(168, 85, 247, 0.3)",
+              background: saving ? "rgba(255, 255, 255, 0.05)" : "linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)",
+              color: "white",
+              fontWeight: 500,
+              cursor: saving ? "not-allowed" : "pointer",
+              transition: "all 0.2s ease",
+              boxShadow: saving ? "none" : "0 2px 8px rgba(168, 85, 247, 0.3)",
+            }}
           >
             Next
           </button>
         ) : (
-          <button onClick={onSubmit} disabled={saving}>
+          <button
+            onClick={onSubmit}
+            disabled={saving}
+            style={{
+              padding: "8px 16px",
+              borderRadius: "8px",
+              border: "1px solid rgba(168, 85, 247, 0.3)",
+              background: saving ? "rgba(255, 255, 255, 0.05)" : "linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)",
+              color: "white",
+              fontWeight: 500,
+              cursor: saving ? "not-allowed" : "pointer",
+              transition: "all 0.2s ease",
+              boxShadow: saving ? "none" : "0 2px 8px rgba(168, 85, 247, 0.3)",
+            }}
+          >
             {saving ? "Saving..." : isEdit ? "Update Product" : "Create Product"}
           </button>
         )}
@@ -219,10 +257,16 @@ function Stepper({ step }: { step: number }) {
           <div
             key={t}
             style={{
-              padding: "6px 10px",
+              padding: "8px 16px",
               borderRadius: 999,
-              border: "1px solid #222",
-              background: active ? "#222" : "transparent",
+              border: active ? "1px solid rgba(168, 85, 247, 0.3)" : "1px solid rgba(168, 85, 247, 0.2)",
+              background: active
+                ? "linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%)"
+                : "linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(139, 92, 246, 0.03) 100%)",
+              boxShadow: active ? "0 2px 8px rgba(168, 85, 247, 0.2)" : "none",
+              color: active ? "rgba(255, 255, 255, 0.95)" : "rgba(255, 255, 255, 0.7)",
+              fontWeight: active ? 600 : 400,
+              transition: "all 0.2s ease",
             }}
           >
             {n}. {t}
