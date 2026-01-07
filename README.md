@@ -12,7 +12,7 @@ A **Server-Side Rendered (SSR) Admin Dashboard** built with **Next.js App Router
 
 ## 📽️ Demo Video
 
-👉 **Demo Video Link:** *Add YouTube / Google Drive link here*
+👉 **Demo Video Link:** https://drive.google.com/drive/folders/1PLCvUbD_5bOOnG-h21I865x5rqeayY-_?usp=sharing
 
 ---
 
