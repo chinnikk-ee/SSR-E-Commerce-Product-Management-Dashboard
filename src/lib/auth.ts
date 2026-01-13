@@ -14,7 +14,7 @@ export async function verifyPassword(password: string, hashedPassword: string): 
 }
 
 export async function createSession(userId: string) {
-  const cookieStore = await cookies();
+  const cookieStore = cookies();
   cookieStore.set(SESSION_COOKIE_NAME, userId, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
@@ -25,12 +25,12 @@ export async function createSession(userId: string) {
 }
 
 export async function deleteSession() {
-  const cookieStore = await cookies();
+  const cookieStore = cookies();
   cookieStore.delete(SESSION_COOKIE_NAME);
 }
 
 export async function getSession(): Promise<string | null> {
-  const cookieStore = await cookies();
+  const cookieStore = cookies();
   const session = cookieStore.get(SESSION_COOKIE_NAME);
   return session?.value || null;
 }
